@@ -1,6 +1,17 @@
 # engineering-standards
 
-A Claude Code plugin with one skill: `engineering-standards`. The skill holds shared engineering and review rules: verification, design checks, Git, writing, investigation, and code review.
+A Claude Code plugin with shared engineering and review rules. It has 6 skills:
+
+|Skill|Use|
+|---|---|
+|`agent-guardrails`|Verification, explicit orders, scope, reply style, workflow|
+|`design-review`|Design checks, principles, time sources, AWS|
+|`git-workflow`|Branches, worktrees, history, commit series|
+|`technical-writing`|Commit messages, PR text, comments, text for non-engineers|
+|`incident-investigation`|6W1H, document reading|
+|`code-review`|Review procedure, checklist, output format, merge checks|
+
+Claude Code loads a skill only when the task matches its description. It does not load `agent-guardrails` in every task. To apply the hard rules in every task, copy them into your own `CLAUDE.md`.
 
 ## Install
 
@@ -15,14 +26,14 @@ To get a new version, run `/plugin marketplace update engineering-standards`.
 
 ### As a plain skill
 
-Copy `skills/engineering-standards/` to one of these locations:
+Copy the folders in `skills/` to one of these locations:
 
 |Scope|Path|
 |---|---|
-|All your projects|`~/.claude/skills/engineering-standards/`|
-|One repo (shared with the team)|`<repo>/.claude/skills/engineering-standards/`|
+|All your projects|`~/.claude/skills/<skill>/`|
+|One repo (shared with the team)|`<repo>/.claude/skills/<skill>/`|
 
-Claude Code loads the skill when a task matches its description. To start it by hand, ask: "Review this PR with the engineering-standards skill."
+Claude Code loads the skill when a task matches its description. To start it by hand, ask: "Review this PR with the code-review skill."
 
 ## Recommended plugins
 

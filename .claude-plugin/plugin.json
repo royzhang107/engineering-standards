@@ -1,0 +1,9 @@
+{
+  "name": "engineering-standards",
+  "version": "1.0.0",
+  "description": "Engineering and review standards for coding agents: verification, design checks, Git, writing, investigation, and code review.",
+  "author": {
+    "name": "royzhang107",
+    "url": "https://github.com/royzhang107"
+  }
+}

@@ -44,7 +44,7 @@ Scale the depth to the risk:
 |Production and destructive|3 to 5 questions|
 |Production and additive|1 to 2 questions|
 |Dev or staging|0 to 1 question|
-|Known pattern, clear scope|No questions. Do the task.|
+|Known pattern, clear scope, not destructive|No questions. Do the task. A destructive operation still needs the "Pre-flight for destructive operations" rule of the `agent-guardrails` skill.|
 
 ## Ask or decide
 
